@@ -1,0 +1,35 @@
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+.Python
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs and runtime files
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE/project configs
+.vscode/
+.idea/
+
+# Attendance logs and face data (keep folders, ignore contents)
+logs/*
+!logs/.gitkeep
+
+known_faces/*
+!known_faces/.gitkeep
+
+# Temporary captured image
+temp.jpg
