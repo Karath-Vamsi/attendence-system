@@ -24,17 +24,3 @@ def view_attendance_for_student(name):
         status = student_row.iloc[0][col]
         print(f"  {col}: {status if pd.notna(status) else 'Absent'}")
 
-def auto_mark_absentees():
-    now = datetime.now()
-    today_str = now.strftime("%Y-%m-%d")
-    flag_file = os.path.join("logs", f".absentees_marked_{today_str}.flag")
-
-    if now.hour >= 18:
-        if not os.path.exists(flag_file):
-            print("Marking absentees now...")
-            mark_absentees()
-            with open(flag_file, "w") as f:
-                f.write("done")
-            print("Absentees marked successfully!")
-        else:
-            print("Absentees already marked for today.")
